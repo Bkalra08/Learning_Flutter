@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/routes.dart';
+
 
 class loginpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
         color: Colors.white,
+        child: SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(
@@ -60,12 +63,16 @@ class loginpage extends StatelessWidget {
                       child: Text("Login"),
                       style: TextButton.styleFrom(),
                       onPressed: () {
-                        print("No , She Didn't😂😂🤣🤣");
+                        Navigator.pushNamed(context, MyRoutes.homeRoute);
                       },
                     )
                   ],
-                ))
+                ),
+            )
+        
           ],
-        ));
+        ),
+        )
+        );
   }
 }
